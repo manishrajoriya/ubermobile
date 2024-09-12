@@ -44,12 +44,19 @@ const Onboarding = () => {
       }
       </Swiper>
       <CustomButton
-      onPress={()=>{router.replace("/(auth)/sign-up")}}
-      title="Next"
+      
+      title={activeIndex === 2 ? "Get Started" : "Next"}
+      onPress={()=>{
+        if(activeIndex === 2){
+          router.replace("/(auth)/sign-up")
+        }else{
+          swiperRef.current?.scrollBy(1)
+        }
+      }}
       bgVariant="primary"
       textVariant="default"
       
-      className=""
+      className="w-11/12"
       />
     </SafeAreaView>
   )
