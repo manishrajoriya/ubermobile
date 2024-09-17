@@ -13,10 +13,13 @@ const SignIn = () => {
     password: "",
   });
 
+  
   const onSignInPress = async () => {
     console.log(form);
+    console.log();
+    
   }
-
+  
   return (
     <ScrollView className="flex-1 bg-white">
       <View className="flex-1">
